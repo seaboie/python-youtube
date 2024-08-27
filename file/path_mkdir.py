@@ -12,6 +12,20 @@ def create_path():
         # path to make directory
         path_characters_dir.mkdir(parents=True, exist_ok=True)
 
+        # path of file
+        path_of_file = path_characters_dir / 'zelda.txt'
+
+        with open(path_of_file, 'a+') as f:
+             f.write('\nLink again')
+
+             f.seek(0)
+             
+        #  Read    
+        with open(path_of_file, 'r') as f:
+             content = f.read()
+             print(content)
+             
+
 
 
 def main():
